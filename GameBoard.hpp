@@ -7,27 +7,29 @@ using namespace std;
 
 class GameBoard {
     public:
-        GameBoard(string name);
-        GameBoard(int w, int h, double probability);
-
-        void readFile();
-        void randomBoard();
-
-        int getWidth();
+        GameBoard();
+        ~GameBoard();
+        void createFileBoard(string fileName);
+        void createRandomBoard(int height, int width, double probability);
+        void displayBoard();
+        void setHeight(int height);
+        void setWidth(int width);
         int getHeight();
-        void setWidth(int w);
-        void setHeight(int h);
+        int getWidth();
+        static string boardChoice();
+        static void welcome();
+        void setValue(int position);
+        void setBoardValue(int height, int width, char value);
+        void displayEntireBoard();
+        char getCharAt(int i,int j);
+
 
     private:
+        char** board;
+        const char OPEN = '-';
+        const char CELL = 'X';
         int height;
         int width;
-        char** board;
-        string fileName;
-        double probability;
-        char open = '-';
-        char cell = 'X';
-
-    
 };
 
 #endif
