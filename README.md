@@ -1,4 +1,7 @@
 # CPSC350_Assignment2
+Name: Jessie Pao ID: 2382631
+Name: Michael Masakayan ID: 
+
 
 Sources:
 
