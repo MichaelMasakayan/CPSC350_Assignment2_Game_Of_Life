@@ -8,21 +8,25 @@ using namespace std;
 class GameBoard {
     public:
         GameBoard();
+        GameBoard(int h, int w);
         ~GameBoard();
         void createFileBoard(string fileName);
         void createRandomBoard(int height, int width, double probability);
-        void displayBoard();
-        void setHeight(int height);
-        void setWidth(int width);
+
+        
+        
+        void displayBoard(int generation);
+        void displayEntireBoard();
+        void printBoardText(string printResults, int generation);
+        
+        //Getters and Setters
+        char getCharAt(int i,int j);
         int getHeight();
         int getWidth();
-        static string boardChoice();
-        static void welcome();
+        void setHeight(int height);
+        void setWidth(int width);
         void setValue(int position);
         void setBoardValue(int height, int width, char value);
-        void displayEntireBoard();
-        char getCharAt(int i,int j);
-
 
     private:
         char** board;
@@ -30,6 +34,7 @@ class GameBoard {
         const char CELL = 'X';
         int height;
         int width;
+        // int getAdjacentCellCount(GameBoard& board1, int x, int y);
 };
 
 #endif

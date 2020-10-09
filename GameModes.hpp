@@ -1,22 +1,25 @@
 #ifndef _GAME_MODES_HPP_
 #define _GAME_MODES_HPP_
 
+// #include "GameBoard.hpp"
+
 #include <string>
 
 class GameModes {
     public:
         GameModes();    //default constructor
-        //GameModes();
+        static void copyBoard(GameBoard& original, GameBoard& copy);
+        static void updateBoard(GameBoard& current, GameBoard& next);
 
     protected:
         int x;
         int y;
         int width;
         int height;
-        const char cell = 'X';
-        const char enpty = '-';
 
     private:
+        static int getAdjacentCellCount(GameBoard& board1, int x, int y); 
+        
 
 
 };
@@ -25,8 +28,6 @@ class ClassicMode : public GameModes {
     public:
         ClassicMode();
         static void AddClassicBoundaries(GameBoard& board1); //Add the ' -' for the boundry
-        GameBoard UpdateClassic(GameBoard board);
-        void askKeepGoing(); 
 
     private:
     
@@ -36,7 +37,6 @@ class ClassicMode : public GameModes {
 class MirrorMode : public GameModes {
     public:
         static void AddMirrorBoundaries(GameBoard& board1); 
-        GameBoard UpdateClassic(GameBoard board);
 
     private:
 };
@@ -44,7 +44,6 @@ class MirrorMode : public GameModes {
 class DonutMode : public GameModes {
     public:
         static void AddDonutBoundaries(GameBoard& board1);
-        GameBoard UpdateDonut(GameBoard board);
 }; 
 
 

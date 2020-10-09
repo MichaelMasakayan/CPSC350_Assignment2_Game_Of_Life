@@ -3,6 +3,23 @@
         "iostream": "cpp",
         "iosfwd": "cpp",
         "new": "cpp",
-        "ostream": "cpp"
+        "ostream": "cpp",
+        "iterator": "cpp",
+        "__locale": "cpp",
+        "ios": "cpp",
+        "string": "cpp",
+        "filesystem": "cpp",
+        "__bit_reference": "cpp",
+        "__string": "cpp",
+        "algorithm": "cpp",
+        "deque": "cpp",
+        "string_view": "cpp",
+        "__functional_base": "cpp",
+        "istream": "cpp",
+        "locale": "cpp",
+        "memory": "cpp",
+        "tuple": "cpp",
+        "utility": "cpp",
+        "__threading_support": "cpp"
     }
 }
